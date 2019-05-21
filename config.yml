@@ -1,0 +1,38 @@
+#passing variables to functions for each file?
+# can this all read from 1 file? or break up the files?
+
+#s3 files, make file is not in prod
+
+load_data:
+   ingest:
+       source_data_url: https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/taylor/cloud.data
+       sed_start_index: 21
+       sed_end_index: 50p
+       name: clouds.data
+       path: ./data
+   clean:
+        first_start: 53
+        first_back: 1077
+        second_start: 1082
+        second_back: 2105
+      
+train_model:
+    
+    start: 
+        seed: 1567
+        split: 0.3   
+        features: 
+            - 'visible_range'
+            - 'visible_norm_range'
+            - 'log_entropy'
+            -  'IR_mean'
+            - 'entropy_x_contrast'
+            - 'IR_range'
+            - 'IR_norm_range'
+            - 'visible_mean'
+
+    path: ./eval
+    file_name: 'evaluation.txt'
+    save_location: './models/'
+    f_name: 'logistic.pkl'
+

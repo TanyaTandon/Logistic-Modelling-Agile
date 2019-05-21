@@ -1,0 +1,23 @@
+Performance measures for model: evaluation.txt
+AUC on test: 0.000
+Accuracy on test: 0.998
+
+------------------------------------------------------------
+Confusion Matrix:
+
+                 Predicted negative  Predicted positive
+Actual negative                 312                   1
+Actual positive                   0                 302
+------------------------------------------------------------
+feature importances/ odd ratios:
+
+                       coefs  odds_ratio
+visible_norm_range  0.058207    1.059934
+visible_range       0.036042    1.036699
+visible_mean        0.027607    1.027992
+IR_norm_range      -0.016562    0.983575
+IR_mean            -0.082230    0.921061
+IR_range           -0.118095    0.888612
+entropy_x_contrast -0.127812    0.880019
+log_entropy        -0.701177    0.496001
+------------------------------------------------------------
